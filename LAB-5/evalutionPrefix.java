@@ -3,36 +3,7 @@ public class evalutionPrefix {
     static Stack<Integer> stack = new Stack<Integer>();
 
     public static void stackPush(int x){
-        if(x==48){
-            stack.push(0);
-        }
-        else if(x==49){
-            stack.push(1);
-        }
-        else if(x==50){
-            stack.push(2);
-        }
-        else if(x==51){
-            stack.push(3);
-        }
-        else if(x==52){
-            stack.push(4);
-        }
-        else if(x==53){
-            stack.push(5);
-        }
-        else if(x==54){
-            stack.push(6);
-        }
-        else if(x==55){
-            stack.push(7);
-        }
-        else if(x==56){
-            stack.push(8);
-        }
-        else{
-            stack.push(9);
-        }
+        stack.push(x);
     }
 
     public static void operate(int x){
@@ -73,10 +44,10 @@ public class evalutionPrefix {
             operate(x);
         }
         else{
-            stackPush(x);
+             int temp=(int)x-48;
+            stackPush(temp);
         }
     }
     System.out.println(stack.pop());
     }
 }
-
