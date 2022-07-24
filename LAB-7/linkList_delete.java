@@ -1,5 +1,3 @@
-import java.net.SocketImpl;
-
 public class linkList_delete {
     Node head;
     public class Node{
@@ -40,24 +38,21 @@ public class linkList_delete {
     }
 
 
-    public void find(int x){
+    public void delete(int x){
         Node node=head;
-        boolean flag=false;
-        int i=1;
+        Node prev=head;
         while(node!=null){
-            if(node.data==x){
-                flag=true;
+            if(head.data==x){
+                head=head.next;
                 break;
             }
-            i++;
+            else if(node.data==x){
+                break;
+            }
+            prev=node;
             node=node.next;
         }
-        if(flag){
-            System.out.println("found At_"+i);
-        }
-        else{
-            System.out.println("not found");
-        }
+        prev.next=node.next;
     }
 
 
@@ -66,8 +61,9 @@ public class linkList_delete {
         list.insert(10);
         list.insert(20);
         list.insert(30);
+        list.insert(40);
+        
+        list.delete(10);
         list.display();
-
-        list.find(10);
     }
 }
