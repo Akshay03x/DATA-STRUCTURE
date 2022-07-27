@@ -6,11 +6,11 @@ public class linkList_delete {
         public Node(int data){
             this.data=data;
             next=null;
-        }
+        }   
     }
 
 
-    public void insert(int x){
+    public void insertAtAnd(int x){
         Node nnode=new Node(x);
         if(head==null){
             head=nnode;
@@ -24,6 +24,16 @@ public class linkList_delete {
         }
     }
 
+    public void insertAtFirst( int x){
+        Node node=new Node(x);
+        if(head==null){
+            head=node;
+        }
+        else{
+            node.next=head;
+            head=node;
+        }
+    }
 
     public void display(){
         if(head==null){
@@ -58,12 +68,17 @@ public class linkList_delete {
 
     public static void main(String[] args) throws NullPointerException {
         linkList_delete list=new linkList_delete();
-        list.insert(10);
-        list.insert(20);
-        list.insert(30);
-        list.insert(40);
+        // list.insertAtAnd(10);
+        // list.insertAtAnd(20);
+        // list.insertAtAnd(30);
+        // list.insertAtAnd(40);
+
+        list.insertAtFirst(10);
+        list.insertAtFirst(20);
+        list.insertAtFirst(30);
+        list.insertAtFirst(40);
         
-        list.delete(10);
+        // list.delete(30);
         list.display();
     }
 }
