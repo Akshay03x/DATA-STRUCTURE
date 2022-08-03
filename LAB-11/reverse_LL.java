@@ -34,10 +34,10 @@ public class reverse_LL {
             if(node==head){
                 prev=head;
             }
-            // else{
-            //     node.next=prev;
-            //     prev=node;
-            // }
+             else{
+                 node.next=prev;
+                 prev=node;
+             }
             node=node.next;
         }
         node.next=prev;
