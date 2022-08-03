@@ -54,7 +54,7 @@ public class copy_LL {
         }
 
         System.out.println();
-        System.out.println("---------");
+        System.out.println("--------");
 
         while(node2!=null){
             System.out.print("["+node2.data+"]");
