@@ -42,7 +42,9 @@ public class circular_doubly_LL{
 
 	public void displayFTOL(){
 		Node node=head;
-		while(node!=tail){
+		System.out.println(node.data);
+		node=node.next;
+		while(node!=head){
 			System.out.print("["+node.data+"]");
 			node=node.next;
 		}
@@ -76,7 +78,7 @@ public class circular_doubly_LL{
 		d.insertLast(40);
 
 		d.insertFirst(0);
-		d.circular();
+		// d.circular();
 		d.displayFTOL();
 
 		System.out.println();
