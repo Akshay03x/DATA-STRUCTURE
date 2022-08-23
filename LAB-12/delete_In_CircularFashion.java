@@ -26,15 +26,30 @@ public class delete_In_CircularFashion {
     public void delete_In_Circular(int z){
         Node node=head;
         Node prev=head;
+        display();
+        System.out.println();
         while(node!=node.next){
             for(int i=z;i>1;i--){
                 prev=node;
                 node=node.next;
             }
+            if(node==head|| node==tail){
+                if(node==head){
+                    head=node.next;
+                    prev.next=head;
+                }
+                else{
+                    tail=prev;
+                    prev.next=head;
+                }
+            }
             prev.next=node.next;
             node=prev.next;
+            if(node==tail || node==head){
+                display();
+                System.out.println();
+            }
         }
-        head=node;
     }
     public void display(){
         Node node=head;
@@ -54,7 +69,6 @@ public class delete_In_CircularFashion {
         d.insert(40);
         d.insert(50);
         d.delete_In_Circular(4);
-        d.display();
     }
 
 }
