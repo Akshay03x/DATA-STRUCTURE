@@ -2,8 +2,7 @@ public class circular_doubly_LL{
 	Node head,tail;
 	public class Node{
 		int data;
-		Node prev;
-		Node next;
+		Node prev, next;
 		public Node(int data){
 			this.data=data;	
 			prev=null;
@@ -66,21 +65,15 @@ public class circular_doubly_LL{
 		}
 		return count;
 	}
-	public void circular(){
-		System.out.println(tail.next.data);
-		System.out.println(tail.next.next.data);
-	}
+
 	public static void main(String[] args) {
 		circular_doubly_LL d=new circular_doubly_LL();
 		d.insertLast(10);
 		d.insertLast(20);
 		d.insertLast(30);
 		d.insertLast(40);
-
 		d.insertFirst(0);
-		// d.circular();
 		d.displayFTOL();
-
 		System.out.println();
 	}
 }
